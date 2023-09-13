@@ -1,17 +1,17 @@
 package codingio.northwind.entities.concretes;
 
-import org.springframework.data.annotation.Id;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity; //This will use to jpa infrastructure.
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Table;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import lombok.Data;
 
 @Data //This provides that lombok.
 @Entity //It says Product class called database object. This is annotation method. It shows to which class belongs to the layer. Also, annotation is that to collect data of class or function at the execution time.
 @Table(name = "products")
 public class Product {
+	
 	@Id
 	@GeneratedValue //Creating id value method
 	@Column(name = "product_id")
